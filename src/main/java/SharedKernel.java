@@ -16,6 +16,9 @@ public class SharedKernel {
 
       // IntegrationEvents
       IntegrationEvents.AeronaveCreado.class,
+      IntegrationEvents.TripulacionCreado.class,
+      IntegrationEvents.VueloCreado.class,
+      
 
       // rule
       rule.NotNullRule.class,
