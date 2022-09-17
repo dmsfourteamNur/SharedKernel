@@ -1,6 +1,6 @@
 package core;
 
-import fourteam.mediator.Notification;
+import Fourteam.mediator.Notification;
 
 public class ConfirmedDomainEvent<T> extends DomainEvent implements Notification {
 

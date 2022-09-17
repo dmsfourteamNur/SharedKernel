@@ -1,6 +1,6 @@
 package core;
 
-import fourteam.mediator.Notification;
+import Fourteam.mediator.Notification;
 import java.time.LocalDateTime;
 import java.util.UUID;
 

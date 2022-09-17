@@ -4,7 +4,7 @@
 
   <groupId>dmsnur</groupId>
   <artifactId>SharedKernel</artifactId>
-  <version>1.5</version>
+  <version>1.7</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,8 +26,8 @@
   </dependency>
     <dependency>
       <groupId>dmsnur</groupId>
-      <artifactId>fourteam</artifactId>
-      <version>1.5</version>
+      <artifactId>Fourteam</artifactId>
+      <version>1.8</version>
       <scope>system</scope>
       <systemPath>${basedir}/lib/Fourteam-latest.jar</systemPath>
     </dependency>

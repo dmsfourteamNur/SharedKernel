@@ -1,75 +1,104 @@
 package IntegrationEvents;
 
 import core.IntegrationEvent;
-
-import java.util.Date;
+import java.sql.Date;
+import java.util.List;
 import java.util.UUID;
 
 public class VueloCreado extends IntegrationEvent {
 
-	private UUID key;
-	private String nroVuelo;
-	private String keyAeronave;
-	private String keyAeropuertoOrigen;
-	private String keyAeropuertoDestino;
-	private Date fechaSalida;
-	private Date fechaArribe;
+  private String keyVuelo;
+  private String nroVuelo;
+  private String ciudadOrigen;
+  private String ciudadDestino;
+  private List<Asiento> asiento;
+  private Date fechaSalida;
+  private Date fechaArribe;
 
-	// public List<TripulanteDto> listaTripulante;
-	public UUID getKey() {
-		return key;
-	}
+  public String getNroVuelo() {
+    return this.nroVuelo;
+  }
 
-	public void setKey(UUID key) {
-		this.key = key;
-	}
+  public void setNroVuelo(String nroVuelo) {
+    this.nroVuelo = nroVuelo;
+  }
 
-	public String getNroVuelo() {
-		return nroVuelo;
-	}
+  public Date getFechaSalida() {
+    return this.fechaSalida;
+  }
 
-	public void setNroVuelo(String nroVuelo) {
-		this.nroVuelo = nroVuelo;
-	}
+  public void setFechaSalida(Date fechaSalida) {
+    this.fechaSalida = fechaSalida;
+  }
 
-	public String getKeyAeronave() {
-		return keyAeronave;
-	}
+  public Date getFechaArribe() {
+    return this.fechaArribe;
+  }
 
-	public void setKeyAeronave(String keyAeronave) {
-		this.keyAeronave = keyAeronave;
-	}
+  public void setFechaArribe(Date fechaArribe) {
+    this.fechaArribe = fechaArribe;
+  }
 
-	public String getKeyAeropuertoOrigen() {
-		return keyAeropuertoOrigen;
-	}
+  public String getKeyVuelo() {
+    return this.keyVuelo;
+  }
 
-	public void setKeyAeropuertoOrigen(String keyAeropuertoOrigen) {
-		this.keyAeropuertoOrigen = keyAeropuertoOrigen;
-	}
+  public void setKeyVuelo(String keyVuelo) {
+    this.keyVuelo = keyVuelo;
+  }
 
-	public String getKeyAeropuertoDestino() {
-		return keyAeropuertoDestino;
-	}
+  public String getCiudadOrigen() {
+    return this.ciudadOrigen;
+  }
 
-	public void setKeyAeropuertoDestino(String keyAeropuertoDestino) {
-		this.keyAeropuertoDestino = keyAeropuertoDestino;
-	}
+  public void setCiudadOrigen(String ciudadOrigen) {
+    this.ciudadOrigen = ciudadOrigen;
+  }
 
-	public Date getFechaSalida() {
-		return fechaSalida;
-	}
+  public String getCiudadDestino() {
+    return this.ciudadDestino;
+  }
 
-	public void setFechaSalida(Date fechaSalida) {
-		this.fechaSalida = fechaSalida;
-	}
+  public void setCiudadDestino(String ciudadDestino) {
+    this.ciudadDestino = ciudadDestino;
+  }
 
-	public Date getFechaArribe() {
-		return fechaArribe;
-	}
+  public List<Asiento> getAsiento() {
+    return this.asiento;
+  }
 
-	public void setFechaArribe(Date fechaArribe) {
-		this.fechaArribe = fechaArribe;
-	}
+  public void setAsiento(List<Asiento> asiento) {
+    this.asiento = asiento;
+  }
 
+  public class Asiento {
+
+    private UUID key;
+    private String numero;
+    private int disponibilidad;
+
+    public void setKey(UUID key) {
+      this.key = key;
+    }
+
+    public UUID getKey() {
+      return key;
+    }
+
+    public void setNumero(String numero) {
+      this.numero = numero;
+    }
+
+    public String getNumero() {
+      return numero;
+    }
+
+    public void setDisponibilidad(int disponibilidad) {
+      this.disponibilidad = disponibilidad;
+    }
+
+    public int getDisponibilidad() {
+      return disponibilidad;
+    }
+  }
 }

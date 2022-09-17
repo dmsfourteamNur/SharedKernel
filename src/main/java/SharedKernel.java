@@ -1,4 +1,4 @@
-import fourteam.console.console;
+import Fourteam.console.console;
 
 public class SharedKernel {
 
@@ -17,7 +17,9 @@ public class SharedKernel {
       // IntegrationEvents
       IntegrationEvents.AeronaveCreado.class,
       IntegrationEvents.TripulacionCreado.class,
+      IntegrationEvents.CheckInCreado.class,
       IntegrationEvents.VueloCreado.class,
+      IntegrationEvents.VentaCreado.class,
       
 
       // rule
@@ -34,6 +36,6 @@ public class SharedKernel {
       System.out.print(clas.getName() + "\r");
     }
     console.succes("[", SharedKernel.class.getSimpleName(), "]", "Dependecies load succesfull!");
-
   }
+ 
 }
