@@ -9,6 +9,19 @@ public class VentaCreado extends IntegrationEvent {
   private String nombre;
   private String apellido;
 
+
+  public VentaCreado() {
+  }
+
+  public VentaCreado(String keyVuelo, int dni, String nombre, String apellido) {
+    this.keyVuelo = keyVuelo;
+    this.dni = dni;
+    this.nombre = nombre;
+    this.apellido = apellido;
+  }
+
+
+
   public String getKeyVuelo() {
     return this.keyVuelo;
   }

@@ -1,30 +1,78 @@
 package IntegrationEvents;
 
 import core.IntegrationEvent;
-import java.sql.Date;
+
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import IntegrationEvents.dto.AsientoDto;
+import IntegrationEvents.dto.TripulanteDto;
+
 public class VueloCreado extends IntegrationEvent {
 
-  private String keyVuelo;
-  private String nroVuelo;
-  private String ciudadOrigen;
-  private String ciudadDestino;
-  private List<Asiento> asiento;
-  private Date fechaSalida;
-  private Date fechaArribe;
+  public String nroVuelo;
+  public String keyAeronave;
+  public String keyAeropuertoOrigen;
+  public String keyAeropuertoDestino;
+  public Date fechaSalida;
+  public Date fechaArribe;
+  public String keyTripulacion;
+
+  public List<TripulanteDto> listaTripulantes;
+  public List<AsientoDto> listaAsientos;
+
+
+  public VueloCreado() {
+  }
+
+
+  public VueloCreado(String nroVuelo, String keyAeronave, String keyAeropuertoOrigen, String keyAeropuertoDestino, Date fechaSalida, Date fechaArribe, String keyTripulacion, List<TripulanteDto> listaTripulantes, List<AsientoDto> listaAsientos) {
+    this.nroVuelo = nroVuelo;
+    this.keyAeronave = keyAeronave;
+    this.keyAeropuertoOrigen = keyAeropuertoOrigen;
+    this.keyAeropuertoDestino = keyAeropuertoDestino;
+    this.fechaSalida = fechaSalida;
+    this.fechaArribe = fechaArribe;
+    this.keyTripulacion = keyTripulacion;
+    this.listaTripulantes = listaTripulantes;
+    this.listaAsientos = listaAsientos;
+  }
 
   public String getNroVuelo() {
-    return this.nroVuelo;
+    return nroVuelo;
   }
 
   public void setNroVuelo(String nroVuelo) {
     this.nroVuelo = nroVuelo;
   }
 
+  public String getKeyAeronave() {
+    return keyAeronave;
+  }
+
+  public void setKeyAeronave(String keyAeronave) {
+    this.keyAeronave = keyAeronave;
+  }
+
+  public String getKeyAeropuertoOrigen() {
+    return keyAeropuertoOrigen;
+  }
+
+  public void setKeyAeropuertoOrigen(String keyAeropuertoOrigen) {
+    this.keyAeropuertoOrigen = keyAeropuertoOrigen;
+  }
+
+  public String getKeyAeropuertoDestino() {
+    return keyAeropuertoDestino;
+  }
+
+  public void setKeyAeropuertoDestino(String keyAeropuertoDestino) {
+    this.keyAeropuertoDestino = keyAeropuertoDestino;
+  }
+
   public Date getFechaSalida() {
-    return this.fechaSalida;
+    return fechaSalida;
   }
 
   public void setFechaSalida(Date fechaSalida) {
@@ -32,73 +80,35 @@ public class VueloCreado extends IntegrationEvent {
   }
 
   public Date getFechaArribe() {
-    return this.fechaArribe;
+    return fechaArribe;
   }
 
   public void setFechaArribe(Date fechaArribe) {
     this.fechaArribe = fechaArribe;
   }
 
-  public String getKeyVuelo() {
-    return this.keyVuelo;
+  public String getKeyTripulacion() {
+    return keyTripulacion;
   }
 
-  public void setKeyVuelo(String keyVuelo) {
-    this.keyVuelo = keyVuelo;
+  public void setKeyTripulacion(String keyTripulacion) {
+    this.keyTripulacion = keyTripulacion;
   }
 
-  public String getCiudadOrigen() {
-    return this.ciudadOrigen;
+  public List<TripulanteDto> getListaTripulantes() {
+    return listaTripulantes;
   }
 
-  public void setCiudadOrigen(String ciudadOrigen) {
-    this.ciudadOrigen = ciudadOrigen;
+  public void setListaTripulantes(List<TripulanteDto> listaTripulantes) {
+    this.listaTripulantes = listaTripulantes;
   }
 
-  public String getCiudadDestino() {
-    return this.ciudadDestino;
+  public List<AsientoDto> getListaAsientos() {
+    return listaAsientos;
   }
 
-  public void setCiudadDestino(String ciudadDestino) {
-    this.ciudadDestino = ciudadDestino;
+  public void setListaAsientos(List<AsientoDto> listaAsientos) {
+    this.listaAsientos = listaAsientos;
   }
 
-  public List<Asiento> getAsiento() {
-    return this.asiento;
-  }
-
-  public void setAsiento(List<Asiento> asiento) {
-    this.asiento = asiento;
-  }
-
-  public class Asiento {
-
-    private UUID key;
-    private String numero;
-    private int disponibilidad;
-
-    public void setKey(UUID key) {
-      this.key = key;
-    }
-
-    public UUID getKey() {
-      return key;
-    }
-
-    public void setNumero(String numero) {
-      this.numero = numero;
-    }
-
-    public String getNumero() {
-      return numero;
-    }
-
-    public void setDisponibilidad(int disponibilidad) {
-      this.disponibilidad = disponibilidad;
-    }
-
-    public int getDisponibilidad() {
-      return disponibilidad;
-    }
-  }
 }

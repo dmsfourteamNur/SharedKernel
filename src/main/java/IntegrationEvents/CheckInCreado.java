@@ -9,6 +9,16 @@ public class CheckInCreado extends IntegrationEvent {
   public int numeroAsiento;
   public int disponibilidad;
 
+
+  public CheckInCreado() {
+  }
+
+  public CheckInCreado(UUID keyVuelo, int numeroAsiento, int disponibilidad) {
+    this.keyVuelo = keyVuelo;
+    this.numeroAsiento = numeroAsiento;
+    this.disponibilidad = disponibilidad;
+  }
+
   public UUID getKeyVuelo() {
     return this.keyVuelo;
   }

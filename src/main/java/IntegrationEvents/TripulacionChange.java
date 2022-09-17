@@ -6,18 +6,18 @@ import java.util.UUID;
 
 import IntegrationEvents.dto.TripulanteDto;
 
-public class TripulacionCreado extends IntegrationEvent {
+
+public class TripulacionChange extends IntegrationEvent {
 
   public UUID keyTripulacion;
   public String descripcion;
   public List<TripulanteDto> tripulantes;
 
 
-  public TripulacionCreado() {
+  public TripulacionChange() {
   }
 
-
-  public TripulacionCreado(UUID keyTripulacion, String descripcion, List<TripulanteDto> tripulantes) {
+  public TripulacionChange(UUID keyTripulacion, String descripcion, List<TripulanteDto> tripulantes) {
     this.keyTripulacion = keyTripulacion;
     this.descripcion = descripcion;
     this.tripulantes = tripulantes;
@@ -46,5 +46,6 @@ public class TripulacionCreado extends IntegrationEvent {
   public void setTripulantes(List<TripulanteDto> tripulantes) {
     this.tripulantes = tripulantes;
   }
+
 
 }

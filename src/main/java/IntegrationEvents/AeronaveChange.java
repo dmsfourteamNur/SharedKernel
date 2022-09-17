@@ -6,17 +6,19 @@ import java.util.UUID;
 
 import IntegrationEvents.dto.AsientoDto;
 
-public class AeronaveCreado extends IntegrationEvent {
+
+public class AeronaveChange extends IntegrationEvent {
 
   public UUID keyAeronave;
   public String matricula;
   public String keyModelo;
   public List<AsientoDto> asientos;
 
-  public AeronaveCreado() {
+  public AeronaveChange(){
+
   }
 
-  public AeronaveCreado(UUID keyAeronave, String matricula, String keyModelo, List<AsientoDto> asientos) {
+  public AeronaveChange(UUID keyAeronave, String matricula, String keyModelo, List<AsientoDto> asientos) {
     this.keyAeronave = keyAeronave;
     this.matricula = matricula;
     this.keyModelo = keyModelo;
@@ -46,5 +48,6 @@ public class AeronaveCreado extends IntegrationEvent {
   public void setAsientos(List<AsientoDto> asientos) {
     this.asientos = asientos;
   }
+
 
 }
