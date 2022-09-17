@@ -6,7 +6,7 @@ public class AsientoDto {
     
     public UUID key;
     public UUID keyAeronave;
-    public int numero;
+    public String numero;
     public String clase;
     private int disponibilidad;
 
@@ -22,7 +22,7 @@ public class AsientoDto {
       return clase;
     }
 
-    public int getNumero() {
+    public String getNumero() {
       return numero;
     }
 
@@ -38,7 +38,17 @@ public class AsientoDto {
       this.keyAeronave = keyAeronave;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
       this.numero = numero;
     }
+
+
+    public int getDisponibilidad() {
+        return this.disponibilidad;
+    }
+
+    public void setDisponibilidad(int disponibilidad) {
+        this.disponibilidad = disponibilidad;
+    }
+
 }
