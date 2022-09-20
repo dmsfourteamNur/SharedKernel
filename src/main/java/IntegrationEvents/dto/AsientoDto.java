@@ -3,52 +3,51 @@ package IntegrationEvents.dto;
 import java.util.UUID;
 
 public class AsientoDto {
-    
-    public UUID key;
-    public UUID keyAeronave;
-    public String numero;
-    public String clase;
-    private int disponibilidad;
 
-    public UUID getKey() {
-      return key;
-    }
+  public UUID key;
+  public UUID keyAeronave;
+  public int numero;
+  public String clase;
+  private int disponibilidad;
 
-    public UUID getKeyAeronave() {
-      return keyAeronave;
-    }
+  public UUID getKey() {
+    return key;
+  }
 
-    public String getClase() {
-      return clase;
-    }
+  public UUID getKeyAeronave() {
+    return keyAeronave;
+  }
 
-    public String getNumero() {
-      return numero;
-    }
+  public String getClase() {
+    return clase;
+  }
 
-    public void setClase(String clase) {
-      this.clase = clase;
-    }
+  public int getNumero() {
+    return numero;
+  }
 
-    public void setKey(UUID key) {
-      this.key = key;
-    }
+  public void setClase(String clase) {
+    this.clase = clase;
+  }
 
-    public void setKeyAeronave(UUID keyAeronave) {
-      this.keyAeronave = keyAeronave;
-    }
+  public void setKey(UUID key) {
+    this.key = key;
+  }
 
-    public void setNumero(String numero) {
-      this.numero = numero;
-    }
+  public void setKeyAeronave(UUID keyAeronave) {
+    this.keyAeronave = keyAeronave;
+  }
 
+  public void setNumero(int numero) {
+    this.numero = numero;
+  }
 
-    public int getDisponibilidad() {
-        return this.disponibilidad;
-    }
+  public int getDisponibilidad() {
+    return this.disponibilidad;
+  }
 
-    public void setDisponibilidad(int disponibilidad) {
-        this.disponibilidad = disponibilidad;
-    }
+  public void setDisponibilidad(int disponibilidad) {
+    this.disponibilidad = disponibilidad;
+  }
 
 }
