@@ -1,10 +1,12 @@
 package IntegrationEvents;
 
+import java.util.UUID;
+
 import core.IntegrationEvent;
 
 public class VentaCreado extends IntegrationEvent {
 
-  private String keyVuelo;
+  private UUID keyVuelo;
   private int dni;
   private String nombre;
   private String apellido;
@@ -13,7 +15,7 @@ public class VentaCreado extends IntegrationEvent {
   public VentaCreado() {
   }
 
-  public VentaCreado(String keyVuelo, int dni, String nombre, String apellido) {
+  public VentaCreado(UUID keyVuelo, int dni, String nombre, String apellido) {
     this.keyVuelo = keyVuelo;
     this.dni = dni;
     this.nombre = nombre;
@@ -22,11 +24,11 @@ public class VentaCreado extends IntegrationEvent {
 
 
 
-  public String getKeyVuelo() {
+  public UUID getKeyVuelo() {
     return this.keyVuelo;
   }
 
-  public void setKeyVuelo(String keyVuelo) {
+  public void setKeyVuelo(UUID keyVuelo) {
     this.keyVuelo = keyVuelo;
   }
 
