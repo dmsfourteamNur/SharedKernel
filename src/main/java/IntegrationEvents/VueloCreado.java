@@ -11,68 +11,73 @@ import IntegrationEvents.dto.TripulanteDto;
 
 public class VueloCreado extends IntegrationEvent {
 
+  public UUID key;
   public String nroVuelo;
-  public String keyAeronave;
-  public String keyAeropuertoOrigen;
-  public String keyAeropuertoDestino;
+  public UUID keyAeronave;
+  public UUID keyAeropuertoOrigen;
+  public UUID keyAeropuertoDestino;
   public Date fechaSalida;
   public Date fechaArribe;
-  public String keyTripulacion;
-
-  public List<TripulanteDto> listaTripulantes;
+  public UUID keyTripulacion;
   public List<AsientoDto> listaAsientos;
-
 
   public VueloCreado() {
   }
 
-
-  public VueloCreado(String nroVuelo, String keyAeronave, String keyAeropuertoOrigen, String keyAeropuertoDestino, Date fechaSalida, Date fechaArribe, String keyTripulacion, List<TripulanteDto> listaTripulantes, List<AsientoDto> listaAsientos) {
+  public VueloCreado(UUID Key, String nroVuelo, UUID keyAeronave, UUID keyAeropuertoOrigen, UUID keyAeropuertoDestino,
+      Date fechaSalida, Date fechaArribe,
+      List<AsientoDto> listaAsientos) {
     this.nroVuelo = nroVuelo;
     this.keyAeronave = keyAeronave;
     this.keyAeropuertoOrigen = keyAeropuertoOrigen;
     this.keyAeropuertoDestino = keyAeropuertoDestino;
     this.fechaSalida = fechaSalida;
     this.fechaArribe = fechaArribe;
-    this.keyTripulacion = keyTripulacion;
-    this.listaTripulantes = listaTripulantes;
     this.listaAsientos = listaAsientos;
   }
 
+  public UUID getKey() {
+    return this.key;
+  }
+
+  public void setKey(UUID key) {
+    this.key = key;
+  }
+
   public String getNroVuelo() {
-    return nroVuelo;
+    return this.nroVuelo;
   }
 
   public void setNroVuelo(String nroVuelo) {
     this.nroVuelo = nroVuelo;
   }
 
-  public String getKeyAeronave() {
-    return keyAeronave;
+  public UUID getKeyAeronave() {
+    return this.keyAeronave;
   }
 
-  public void setKeyAeronave(String keyAeronave) {
+  public void setKeyAeronave(UUID keyAeronave) {
     this.keyAeronave = keyAeronave;
   }
 
-  public String getKeyAeropuertoOrigen() {
-    return keyAeropuertoOrigen;
+  public UUID getKeyAeropuertoOrigen() {
+    return this.keyAeropuertoOrigen;
   }
 
-  public void setKeyAeropuertoOrigen(String keyAeropuertoOrigen) {
+  public void setKeyAeropuertoOrigen(UUID keyAeropuertoOrigen) {
     this.keyAeropuertoOrigen = keyAeropuertoOrigen;
   }
 
-  public String getKeyAeropuertoDestino() {
-    return keyAeropuertoDestino;
+  public UUID getKeyAeropuertoDestino() {
+    return this.keyAeropuertoDestino;
   }
 
-  public void setKeyAeropuertoDestino(String keyAeropuertoDestino) {
+  public void setKeyAeropuertoDestino(UUID keyAeropuertoDestino) {
     this.keyAeropuertoDestino = keyAeropuertoDestino;
   }
 
   public Date getFechaSalida() {
-    return fechaSalida;
+    return this.fechaSalida;
   }
 
   public void setFechaSalida(Date fechaSalida) {
@@ -80,31 +85,23 @@ public class VueloCreado extends IntegrationEvent {
   }
 
   public Date getFechaArribe() {
-    return fechaArribe;
+    return this.fechaArribe;
   }
 
   public void setFechaArribe(Date fechaArribe) {
     this.fechaArribe = fechaArribe;
   }
 
-  public String getKeyTripulacion() {
-    return keyTripulacion;
+  public UUID getKeyTripulacion() {
+    return this.keyTripulacion;
   }
 
-  public void setKeyTripulacion(String keyTripulacion) {
+  public void setKeyTripulacion(UUID keyTripulacion) {
     this.keyTripulacion = keyTripulacion;
   }
 
-  public List<TripulanteDto> getListaTripulantes() {
-    return listaTripulantes;
-  }
-
-  public void setListaTripulantes(List<TripulanteDto> listaTripulantes) {
-    this.listaTripulantes = listaTripulantes;
-  }
-
   public List<AsientoDto> getListaAsientos() {
-    return listaAsientos;
+    return this.listaAsientos;
   }
 
   public void setListaAsientos(List<AsientoDto> listaAsientos) {
