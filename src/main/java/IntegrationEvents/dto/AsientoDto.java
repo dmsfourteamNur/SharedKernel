@@ -8,7 +8,16 @@ public class AsientoDto {
   public UUID keyAeronave;
   public int numero;
   public String clase;
-  private int disponibilidad;
+  public Double precio;
+  public int disponibilidad;
+
+  public Double getPrecio() {
+    return this.precio;
+  }
+
+  public void setPrecio(Double precio) {
+    this.precio = precio;
+  }
 
   public UUID getKey() {
     return key;
