@@ -23,4 +23,10 @@ public class DomainEvent implements Notification {
   public UUID getKey() {
     return Key;
   }
+
+  @Override
+  public String getGenericName() {
+    // TODO Auto-generated method stub
+    return this.getClass().getName();
+  }
 }
