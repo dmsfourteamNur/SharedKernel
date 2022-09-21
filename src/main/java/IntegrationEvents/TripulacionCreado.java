@@ -1,25 +1,25 @@
 package IntegrationEvents;
 
-import core.IntegrationEvent;
 import java.util.List;
 import java.util.UUID;
 
 import IntegrationEvents.dto.TripulanteDto;
+import core.IntegrationEvent;
 
 public class TripulacionCreado extends IntegrationEvent {
 
   public UUID keyTripulacion;
   public String descripcion;
   public List<TripulanteDto> tripulantes;
-
+  public String estado;
 
   public TripulacionCreado() {
   }
 
-
-  public TripulacionCreado(UUID keyTripulacion, String descripcion, List<TripulanteDto> tripulantes) {
+  public TripulacionCreado(UUID keyTripulacion, String descripcion, String estado, List<TripulanteDto> tripulantes) {
     this.keyTripulacion = keyTripulacion;
     this.descripcion = descripcion;
+    this.estado = estado;
     this.tripulantes = tripulantes;
   }
 
@@ -45,6 +45,14 @@ public class TripulacionCreado extends IntegrationEvent {
 
   public void setTripulantes(List<TripulanteDto> tripulantes) {
     this.tripulantes = tripulantes;
+  }
+
+  public String getEstado() {
+    return estado;
+  }
+
+  public void setEstado(String estado) {
+    this.estado = estado;
   }
 
 }
