@@ -9,7 +9,8 @@ public abstract class IntegrationEvent implements Notification {
   public LocalDateTime OcurredOn;
   public UUID Key;
 
-  public IntegrationEvent() {}
+  public IntegrationEvent() {
+  }
 
   public IntegrationEvent(LocalDateTime ocurredOn) {
     this.OcurredOn = ocurredOn;
@@ -22,5 +23,11 @@ public abstract class IntegrationEvent implements Notification {
 
   public UUID getKey() {
     return Key;
+  }
+
+  @Override
+  public String getGenericName() {
+    // TODO Auto-generated method stub
+    return null;
   }
 }

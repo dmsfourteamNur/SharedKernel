@@ -24,13 +24,13 @@
       <version>2.21.0</version>
       <scope>test</scope>
   </dependency>
-    <dependency>
-      <groupId>dmsnur</groupId>
-      <artifactId>Fourteam</artifactId>
-      <version>1.8</version>
-      <scope>system</scope>
-      <systemPath>${basedir}/lib/Fourteam-latest.jar</systemPath>
-    </dependency>
+  <dependency>
+    <groupId>dmsnur</groupId>
+    <artifactId>Fourteam</artifactId>
+    <version>1.8</version>
+    <scope>system</scope>
+    <systemPath>${basedir}/lib/Fourteam-latest.jar</systemPath>
+  </dependency>
 
   </dependencies>
 
