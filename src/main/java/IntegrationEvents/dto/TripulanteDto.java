@@ -10,8 +10,8 @@ public class TripulanteDto {
   public String apellido;
   public String tipo;
   public String estado;
-  private String emailAddress;
-  private String cargo;
+  public String emailAddress;
+  public String cargo;
 
   public TripulanteDto() {
   }
