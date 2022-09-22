@@ -7,22 +7,19 @@ import core.IntegrationEvent;
 public class VentaCreado extends IntegrationEvent {
 
   private UUID keyVuelo;
-  private int dni;
+  private String dni;
   private String nombre;
   private String apellido;
-
 
   public VentaCreado() {
   }
 
-  public VentaCreado(UUID keyVuelo, int dni, String nombre, String apellido) {
+  public VentaCreado(UUID keyVuelo, String dni, String nombre, String apellido) {
     this.keyVuelo = keyVuelo;
     this.dni = dni;
     this.nombre = nombre;
     this.apellido = apellido;
   }
-
-
 
   public UUID getKeyVuelo() {
     return this.keyVuelo;
@@ -32,12 +29,12 @@ public class VentaCreado extends IntegrationEvent {
     this.keyVuelo = keyVuelo;
   }
 
-  public int getDni() {
-    return this.dni;
+  public void setDni(String dni) {
+    this.dni = dni;
   }
 
-  public void setDni(int dni) {
-    this.dni = dni;
+  public String getDni() {
+    return dni;
   }
 
   public String getNombre() {
