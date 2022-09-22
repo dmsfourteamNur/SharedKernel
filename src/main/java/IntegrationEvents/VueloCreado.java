@@ -1,21 +1,19 @@
 package IntegrationEvents;
 
-import core.IntegrationEvent;
-
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
 import IntegrationEvents.dto.AsientoDto;
-import IntegrationEvents.dto.TripulanteDto;
+import core.IntegrationEvent;
 
 public class VueloCreado extends IntegrationEvent {
 
   public UUID key;
   public String nroVuelo;
   public UUID keyAeronave;
-  public UUID keyAeropuertoOrigen;
-  public UUID keyAeropuertoDestino;
+  public String origen;
+  public String destino;
   public Date fechaSalida;
   public Date fechaArribe;
   public UUID keyTripulacion;
@@ -24,13 +22,14 @@ public class VueloCreado extends IntegrationEvent {
   public VueloCreado() {
   }
 
-  public VueloCreado(UUID Key, String nroVuelo, UUID keyAeronave, UUID keyAeropuertoOrigen, UUID keyAeropuertoDestino,
+  public VueloCreado(UUID key, String nroVuelo, UUID keyAeronave, String origen, String destino,
       Date fechaSalida, Date fechaArribe,
       List<AsientoDto> listaAsientos) {
+    this.key = key;
     this.nroVuelo = nroVuelo;
     this.keyAeronave = keyAeronave;
-    this.keyAeropuertoOrigen = keyAeropuertoOrigen;
-    this.keyAeropuertoDestino = keyAeropuertoDestino;
+    this.origen = origen;
+    this.destino = destino;
     this.fechaSalida = fechaSalida;
     this.fechaArribe = fechaArribe;
     this.listaAsientos = listaAsientos;
@@ -60,20 +59,20 @@ public class VueloCreado extends IntegrationEvent {
     this.keyAeronave = keyAeronave;
   }
 
-  public UUID getKeyAeropuertoOrigen() {
-    return this.keyAeropuertoOrigen;
+  public String getOrigen() {
+    return origen;
   }
 
-  public void setKeyAeropuertoOrigen(UUID keyAeropuertoOrigen) {
-    this.keyAeropuertoOrigen = keyAeropuertoOrigen;
+  public void setOrigen(String origen) {
+    this.origen = origen;
   }
 
-  public UUID getKeyAeropuertoDestino() {
-    return this.keyAeropuertoDestino;
+  public String getDestino() {
+    return destino;
   }
 
-  public void setKeyAeropuertoDestino(UUID keyAeropuertoDestino) {
-    this.keyAeropuertoDestino = keyAeropuertoDestino;
+  public void setDestino(String destino) {
+    this.destino = destino;
   }
 
   public Date getFechaSalida() {
@@ -107,5 +106,4 @@ public class VueloCreado extends IntegrationEvent {
   public void setListaAsientos(List<AsientoDto> listaAsientos) {
     this.listaAsientos = listaAsientos;
   }
-
 }
