@@ -7,7 +7,7 @@ import java.util.UUID;
 import IntegrationEvents.dto.AsientoDto;
 import core.IntegrationEvent;
 
-public class VueloCreado extends IntegrationEvent {
+public class VueloChange extends IntegrationEvent {
 
   public UUID key;
   public String nroVuelo;
@@ -21,10 +21,10 @@ public class VueloCreado extends IntegrationEvent {
   public UUID keyTripulacion;
   public List<AsientoDto> listaAsientos;
 
-  public VueloCreado() {
+  public VueloChange() {
   }
 
-  public VueloCreado(UUID key, String nroVuelo, UUID keyAeronave, String origen, String destino,
+  public VueloChange(UUID key, String nroVuelo, UUID keyAeronave, String origen, String destino,
       Date fechaSalida, Date fechaArribe, String observacion, String estado,
       List<AsientoDto> listaAsientos) {
     this.key = key;

@@ -21,8 +21,8 @@ public class SharedKernel {
       IntegrationEvents.TripulacionChange.class,
       IntegrationEvents.CheckInCreado.class,
       IntegrationEvents.VueloCreado.class,
+      IntegrationEvents.VueloChange.class,
       IntegrationEvents.VentaCreado.class,
-      
 
       // rule
       rule.NotNullRule.class,
@@ -39,5 +39,5 @@ public class SharedKernel {
     }
     console.succes("[", SharedKernel.class.getSimpleName(), "]", "Dependecies load succesfull!");
   }
- 
+
 }
