@@ -16,6 +16,8 @@ public class VueloCreado extends IntegrationEvent {
   public String destino;
   public Date fechaSalida;
   public Date fechaArribe;
+  public String observacion;
+	public String estado;
   public UUID keyTripulacion;
   public List<AsientoDto> listaAsientos;
 
@@ -23,7 +25,7 @@ public class VueloCreado extends IntegrationEvent {
   }
 
   public VueloCreado(UUID key, String nroVuelo, UUID keyAeronave, String origen, String destino,
-      Date fechaSalida, Date fechaArribe,
+      Date fechaSalida, Date fechaArribe,String observacion, String estado,
       List<AsientoDto> listaAsientos) {
     this.key = key;
     this.nroVuelo = nroVuelo;
@@ -33,6 +35,8 @@ public class VueloCreado extends IntegrationEvent {
     this.fechaSalida = fechaSalida;
     this.fechaArribe = fechaArribe;
     this.listaAsientos = listaAsientos;
+    this.observacion = observacion;
+		this.estado = estado;
   }
 
   public UUID getKey() {
@@ -106,4 +110,19 @@ public class VueloCreado extends IntegrationEvent {
   public void setListaAsientos(List<AsientoDto> listaAsientos) {
     this.listaAsientos = listaAsientos;
   }
+  	public String getObservacion() {
+		return observacion;
+	}
+
+	public void setObservacion(String observacion) {
+		this.observacion = observacion;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
 }
